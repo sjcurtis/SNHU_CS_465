@@ -8,3 +8,6 @@ SET DEBUG=travlr:*
 npm start
 
 navigate to localhost:3000
+
+# Seeding Database
+npx seedgoose seed
