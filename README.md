@@ -11,3 +11,7 @@ navigate to localhost:3000
 
 # Seeding Database
 npx seedgoose seed
+
+# Start Admin Site
+cd app_admin
+ng serve
