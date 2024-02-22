@@ -9,7 +9,17 @@ import { TripDataService } from '../services/trip-data.service';
   styleUrls: ['./add-trip.component.css'],
 })
 export class AddTripComponent implements OnInit {
-  addForm!: FormGroup;
+  addForm: FormGroup = new FormGroup({
+    _id: new FormGroup({}),
+    code: new FormGroup({}),
+    name: new FormGroup({}),
+    length: new FormGroup({}),
+    start: new FormGroup({}),
+    resort: new FormGroup({}),
+    perPerson: new FormGroup({}),
+    image: new FormGroup({}),
+    description: new FormGroup({}),
+  });
   submitted = false;
 
   constructor(
@@ -37,7 +47,7 @@ export class AddTripComponent implements OnInit {
     if (this.addForm.valid) {
       this.tripService.addTrip(this.addForm.value).then((data: any) => {
         console.log(data);
-        this.router.navigate(['']);
+        this.router.navigate(['list-trips']);
       });
     }
   }
