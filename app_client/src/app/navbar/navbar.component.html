@@ -13,38 +13,39 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="list-trips"
-        >Trips<span class="sr-only">(current)</span></a
+      <a class="nav-item nav-link" routerLink="list-trips"
+        >Trips</a
       >
     </div>
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="news"
-        >News<span class="sr-only">(current)</span></a
+      <a class="nav-item nav-link" routerLink="news"
+        >News</a
       >
     </div>
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="news"
-        >Reservations<span class="sr-only">(current)</span></a
+      <a class="nav-item nav-link" routerLink="news"
+        >Reservations</a
       >
     </div>
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="http://localhost:49887/" target="_blank"
-        >Admin<span class="sr-only">(current)</span></a
+      <a class="nav-item nav-link" href="http://localhost:49887/" target="_blank"
+        >Admin</a
       >
     </div>
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="news"
-        >Checkout<span class="sr-only">(current)</span></a
+      <a class="nav-item nav-link" routerLink="news"
+        >Checkout</a
       >
+    </div>
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="login" *ngIf="!isLoggedIn()">
+        <span class="has-icon-left">Log In</span>
+      </a>
+      <a class="nav-item nav-link" (click)="onLogout()" *ngIf="isLoggedIn()">
+        <span class="has-icon-left">Log Out</span>
+      </a>
     </div>
   </div>
-  <div class="navbar-end">
-    <a class="navbar-item" routerLink="login" *ngIf="!isLoggedIn()">
-      <span class="has-icon-left">Log In</span>
-    </a>
-    <a class="navbar-item" (click)="onLogout()" *ngIf="isLoggedIn()">
-      <span class="has-icon-left">Log Out</span>
-    </a>
-  </div>
+
 </nav>
   
