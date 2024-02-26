@@ -1,17 +1,19 @@
 # SNHU_CS_465
 
-# Install dependencies
+## Getting Started
+
+### Install dependencies
 npm install
 
-# Start Webserver
+### Start Webserver
 SET DEBUG=travlr:*
 npm start
 
 navigate to localhost:3000
 
-# Seeding Database
+### Seeding Database
 npx seedgoose seed
 
-# Start Admin Site
+### Start Admin Site
 cd app_admin
 ng serve
